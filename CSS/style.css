@@ -1,0 +1,502 @@
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Empuja el logo a un extremo y la nav al otro */
+    align-items: center; /* Los centra verticalmente */
+    padding: 10px 20px;
+    background-color: #15151e; /* Un color oscuro estilo F1 */
+    color: white;
+}
+
+.topnav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Quita el espacio doble entre bordes */
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #e10600; /* El rojo característico de F1 */
+    color: white;
+}
+/* 1. Estilos generales para que la página se vea limpia */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* 1. Reducimos la altura */
+    padding: 5px 5%;          /* Bajamos el padding vertical de 10px a 5px */
+    height: 60px;             /* Forzamos una altura fija más pequeña */
+    
+    background-color: #272727;
+    color: white;
+
+    /* 2. El truco para que se quede arriba al scrollear */
+    position: sticky;         /* Lo hace "pegajoso" */
+    top: 0;                   /* Se queda pegado justo en el borde superior */
+    z-index: 1000;            /* Asegura que pase por ENCIMA de las fotos y tablas */
+    
+    /* Opcional: una pequeña sombra para que se note que flota sobre el fondo */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5); 
+}
+
+/* Ajustamos el tamaño del logo para que quepa en el nav más chico */
+.navbar img {
+    height: 30px;             /* Bajamos de 40px a 30px */
+    width: auto;
+}
+
+/* 3. Estilo para el Logo */
+.navbar img {
+    height: 100px;              /* Controlamos el tamaño del logo */
+    display: block;
+}
+
+/* 4. El Menú de Navegación */
+.topnav a {
+    color: white;              /* Texto blanco */
+    text-decoration: none;     /* Quita el subrayado de los links */
+    margin-left: 20px;         /* Separa los links entre sí */
+    font-weight: bold;
+    text-transform: uppercase; /* Todo en mayúsculas como en la F1 */
+    transition: 0.3s;          /* Para que el cambio de color sea suave */
+}
+
+/* 5. Efecto al pasar el mouse (Hover) */
+.topnav a:hover {
+    color: #e10600;            /* Rojo Ferrari/F1 al pasar el mouse */
+}
+
+/* Contenedor del formulario */
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Una sombra suave para darle relieve */
+    max-width: 400px; /* Evita que el formulario sea gigante */
+    margin: 20px auto; /* Lo centra en la pantalla */
+    display: flex;
+    flex-direction: column; /* Pone un input debajo del otro */
+    gap: 15px; /* Crea espacio uniforme entre cada input */
+}
+
+/* Estilo para los campos de texto, email y fecha */
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none; /* Quita el borde azul por defecto al hacer click */
+    transition: border-color 0.3s;
+}
+
+/* Cambio de color cuando el usuario hace click para escribir */
+input:focus {
+    border-color: #e10600; /* Rojo F1 para indicar que estás escribiendo ahí */
+}
+
+/* El botón de enviar */
+input[type="submit"] {
+    background-color: #e10600;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer; /* Cambia el cursor a una mano */
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+/* Efecto al pasar el mouse por el botón */
+input[type="submit"]:hover {
+    background-color: #b00500; /* Un rojo más oscuro al presionar */
+}
+body {
+    /* Reemplaza la URL por una imagen HD de F1 */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                      url(../img/f1_wallpaper.webp);
+    
+    background-size: cover;       /* La imagen cubre toda la pantalla */
+    background-position: center;  /* Centra la foto */
+    background-attachment: fixed; /* La imagen se queda quieta mientras haces scroll */
+    background-repeat: no-repeat;
+    
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white; /* Texto blanco para que resalte */
+}
+
+/* Estilos para el Footer */
+.footer {
+    background-color: #15151e; /* Fondo oscuro F1 */
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer p {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* 1. Contenedor de logos: Alineación con Flexbox */
+.sponsors-container {
+    display: flex;
+    justify-content: center; /* Centra los logos horizontalmente */
+    align-items: center;     /* Los centra verticalmente entre ellos */
+    gap: 40px;               /* Espacio uniforme entre cada logo */
+    flex-wrap: wrap;         /* Si no caben en la pantalla (móvil), se bajan */
+}
+
+/* 2. Estilo base de los logos */
+.sponsor-logo {
+    height: 50px;            /* Controlamos la altura para que sean uniformes */
+    width: auto;             /* Mantiene la proporción */
+    
+    /* Filtro a Blanco y Negro y opacidad baja */
+    filter: grayscale(100%); /* Convierte a B&N completo */
+    opacity: 0.6;            /* Lo hace un poco transparente */
+    
+    transition: all 0.4s ease; /* Suaviza el cambio al pasar el mouse */
+}
+
+/* 3. Efecto al pasar el mouse (Hover) */
+.sponsor-link:hover .sponsor-logo {
+    filter: grayscale(0%);   /* Vuelve a su color original */
+    opacity: 1;              /* Opacidad total */
+    transform: scale(1.4);   /* Un ligero aumento de tamaño */
+}
+
+/* Contenedor y Título */
+.table-title {
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: 'F1-Bold', sans-serif; /* Si tuvieras la fuente */
+    margin: 30px 0;
+}
+
+/* Estilo Base de la Tabla */
+.f1-table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: separate; /* Permite redondear bordes de filas */
+    border-spacing: 0 8px;    /* Separa un poco las filas entre sí */
+}
+
+.f1-table th {
+    background-color: #15151e;
+    color: white;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.f1-table td {
+    background-color: rgb(43, 43, 43);
+    padding: 15px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+/* Alineación de datos */
+.pos { font-weight: bold; text-align: center; width: 50px; }
+.pts { font-weight: bold; text-align: right; }
+
+
+.mercedes-tabla { border-left: 5px solid #27f4d2; } /* Verde Turquesa Mercedes */
+.ferrari-tabla  { border-left: 5px solid #e10600; } /* Rojo Ferrari */
+.mclaren-tabla  { border-left: 5px solid #ff8700; } /* Naranja McLaren */
+.redbull-tabla  { border-left: 5px solid #3671C6; } /* Azul Red Bull */
+
+/* 1. Asegúrate de que la tabla NO colapse sus bordes */
+.f1-table {
+    width: 95%;
+    border-collapse: separate; 
+    border-spacing: 0 10px; /* Esto da el efecto de filas separadas */
+}
+
+/* 2. En lugar de darle el borde al <tr>, se lo damos a los <td> */
+/* Pero solo a los de esa clase específica */
+
+.mercedes-tabla td { border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+.mercedes-tabla td:first-child { 
+    border-left: 5px solid #27f4d2; /* Color Mercedes */
+}
+
+.ferrari-tabla td { border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+.ferrari-tabla td:first-child { 
+    border-left: 5px solid #e10600; /* Color Ferrari */
+}
+
+.mclaren-tabla td { border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+.mclaren-tabla td:first-child { 
+    border-left: 5px solid #ff8700; /* Color McLaren */
+}
+
+/* 3. Para que el resto de las celdas tengan el borde derecho */
+.f1-table td:last-child {
+    border-right: 1px solid #ddd;
+}
+.news-section {
+    max-width: 800px;
+    margin: 50px auto; /* Mucho margen arriba y abajo para forzar el scroll */
+    padding: 20px;
+}
+
+.news-section h3 {
+    color: #ffffff;
+    text-transform: uppercase;
+    border-bottom: 2px solid #e10600;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.news-card {
+    background: rgba(255, 255, 255, 0.05); /* Fondo muy sutil */
+    backdrop-filter: blur(5px); /* Efecto de vidrio esmerilado */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-left: 3px solid #666;
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateX(10px); /* Se mueve un poquito al pasar el mouse */
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.news-date {
+    color: #e10600;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.news-card h4 {
+    margin: 10px 0;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.news-card p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.content p {
+    background-color: rgba(0, 0, 0, 0.8); /* Negro con 80% de opacidad */
+    color: white;
+    padding: 20px 40px;       /* Espacio interno para que el texto no toque los bordes del fondo */
+    border-radius: 5px;       /* Bordes un poco redondeados estilo F1 */
+    border-right:4px solid  #e10600;
+    border-left: 4px solid #e10600; /* Detalle en rojo F1 para combinar con la tabla */
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+  /* Estilo para la fila de "Ver más" */
+.view-more-row td {
+    text-align: center;
+    padding: 20px !important; /* Le damos más aire */
+    background-color: rgba(255, 255, 255, 0.05) !important; /* Un fondo sutil */
+}
+
+.view-more-link {
+    color: #ffffff; /* Rojo F1 */
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.view-more-link:hover {
+    color: rgb(0, 131, 238);
+    transform: translateX(5px); /* Pequeño movimiento hacia la derecha */
+}
+
+/* Opcional: Quitar el borde de color de la escudería para esta fila */
+.view-more-row {
+    border-left: none !important;
+}
+
+/* Contenedor principal de las tarjetas */
+.pilots-container {
+    display: flex;
+    flex-wrap: wrap;         /* Permite que las tarjetas bajen a la siguiente fila */
+    justify-content: center; /* Centra las tarjetas si sobra espacio */
+    gap: 25px;               /* Espacio entre tarjetas */
+    padding: 40px 5%;
+}
+
+/* Estilo de la Tarjeta Individual */
+.pilot-card {
+    background-color: #15151e; /* Fondo oscuro */
+    width: 280px;              /* Ancho fijo para asegurar 4 por fila en pantallas grandes */
+    border-radius: 15px;
+    overflow: hidden;          /* Corta la imagen si sobresale de los bordes redondeados */
+    position: relative;
+    border-bottom: 5px solid #666; /* Color genérico, luego lo personalizamos */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pilot-card:hover {
+    transform: translateY(-10px); /* Efecto de levitación */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* Número del piloto arriba a la derecha */
+.pilot-number {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    font-weight: 900;
+    color: rgb(0, 0, 0, 0.7); /* Estilo marca de agua */
+    font-style: italic;
+    z-index: 10;
+}
+
+/* Imagen del piloto */
+.pilot-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Ajusta la foto sin deformarla */
+    filter: grayscale(20%); /* Un toque artístico */
+}
+
+/* Información del piloto (Nombre, País, etc) */
+.pilot-info {
+    padding: 20px;
+    background: linear-gradient(transparent, #15151e 20%);
+    margin-top: -50px; /* Sube el texto sobre la imagen */
+    position: relative;
+}
+
+.pilot-country {
+    color: #ffffff;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    
+}
+
+.pilot-info h4 {
+    margin: 5px 0;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.pilot-team {
+    color: #ccc;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Colores por Escudería (Igual que en la tabla) */
+.mercedes { border-bottom-color: #27f4d2; }
+.ferrari { border-bottom-color: #e10600; }
+.mclaren { border-bottom-color: #ff8700; }
+.alpine { border-bottom-color: #2173B8; }
+.redbull { border-bottom-color: #215bac; }
+.cadillac { border-bottom-color: #585858; }
+.astonmartin { border-bottom-color: #1d4728; }
+
+/* Contenedor que permite el scroll horizontal */ /*Aca empieza el css de escuderias*/
+.carousel-container {
+    display: flex;
+    overflow-x: auto;          /* Habilita el scroll horizontal */
+    scroll-snap-type: x mandatory; /* El truco: obliga a las fotos a "encajar" */
+    gap: 20px;
+    padding: 20px;
+    scrollbar-width: none;     /* Oculta la barra de scroll en Firefox */
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none;             /* Oculta la barra de scroll en Chrome/Safari */
+}
+
+/* Cada item del carrusel */
+.carousel-item {
+    flex: 0 0 100%;             /* Cada foto ocupa el 80% del ancho de la pantalla */
+    scroll-snap-align: center;  /* Al scrollear, la foto se centra automáticamente */
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #15151e;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 700px;             /* Altura fija para los monoplazas */
+    object-fit: cover;         /* Para que la foto no se deforme */
+    display: block;
+}
+
+/* Texto sobre la imagen */
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    padding: 40px 20px 20px;
+    color: white;
+}
+
+.carousel-caption h3 {
+    background-color: rgba(0, 0, 0, 0.8); /* Negro con 80% de opacidad */
+    color: white;
+    padding: 20px 40px;       /* Espacio interno para que el texto no toque los bordes del fondo */
+    border-radius: 5px;       /* Bordes un poco redondeados estilo F1 */
+    border-right:4px solid  #e10600;
+    border-left: 4px solid #e10600; /* Detalle en rojo F1 para combinar con la tabla */
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.instruction {
+    text-align: center;
+    color: #666;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.section-title {
+  text-align: center;
+    color: #ffffff;
+    font-size: 2rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
