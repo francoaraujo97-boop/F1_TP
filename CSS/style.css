@@ -3,7 +3,7 @@
     justify-content: space-between; /* Empuja el logo a un extremo y la nav al otro */
     align-items: center; /* Los centra verticalmente */
     padding: 10px 20px;
-    background-color: #15151e; /* Un color oscuro estilo F1 */
+    background-color: #15151e; 
     color: white;
 }
 
@@ -27,10 +27,10 @@ th, td {
 }
 
 th {
-    background-color: #e10600; /* El rojo característico de F1 */
+    background-color: #e10600; 
     color: white;
 }
-/* 1. Estilos generales para que la página se vea limpia */
+/* 1. Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -42,15 +42,15 @@ body {
     justify-content: space-between;
     align-items: center;
     
-    /* 1. Reducimos la altura */
-    padding: 5px 5%;          /* Bajamos el padding vertical de 10px a 5px */
+    /* Reducimos la altura */
+    padding: 5px 5%; 
     height: 60px;             /* Forzamos una altura fija más pequeña */
     
     background-color: #272727;
     color: white;
 
-    /* 2. El truco para que se quede arriba al scrollear */
-    position: sticky;         /* Lo hace "pegajoso" */
+    /*para que el nav se quede arriba al scrollear */
+    position: sticky;         
     top: 0;                   /* Se queda pegado justo en el borde superior */
     z-index: 1000;            /* Asegura que pase por ENCIMA de las fotos y tablas */
     
@@ -60,29 +60,29 @@ body {
 
 /* Ajustamos el tamaño del logo para que quepa en el nav más chico */
 .navbar img {
-    height: 30px;             /* Bajamos de 40px a 30px */
+    height: 30px;             
     width: auto;
 }
 
-/* 3. Estilo para el Logo */
+/* Estilo para el Logo */
 .navbar img {
-    height: 100px;              /* Controlamos el tamaño del logo */
+    height: 100px;             
     display: block;
 }
 
-/* 4. El Menú de Navegación */
+/* El Menú de Navegación */
 .topnav a {
-    color: white;              /* Texto blanco */
+    color: white;        
     text-decoration: none;     /* Quita el subrayado de los links */
     margin-left: 20px;         /* Separa los links entre sí */
     font-weight: bold;
-    text-transform: uppercase; /* Todo en mayúsculas como en la F1 */
+    text-transform: uppercase;
     transition: 0.3s;          /* Para que el cambio de color sea suave */
 }
 
-/* 5. Efecto al pasar el mouse (Hover) */
+/* Efecto al pasar el mouse (Hover) */
 .topnav a:hover {
-    color: #e10600;            /* Rojo Ferrari/F1 al pasar el mouse */
+    color: #e10600;            /* Rojo al pasar el mouse */
 }
 
 /* Contenedor del formulario */
@@ -106,13 +106,13 @@ input[type="date"] {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    outline: none; /* Quita el borde azul por defecto al hacer click */
+    outline: none;
     transition: border-color 0.3s;
 }
 
 /* Cambio de color cuando el usuario hace click para escribir */
 input:focus {
-    border-color: #e10600; /* Rojo F1 para indicar que estás escribiendo ahí */
+    border-color: #e10600; /* para indicar que estás escribiendo ahí */
 }
 
 /* El botón de enviar */
