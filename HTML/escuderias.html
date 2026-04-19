@@ -1,86 +1,143 @@
 <!doctype html>
-<html lang="es"> <head>
+<html lang="es">
+  <head>
     <title>Formula 1</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"/>
   </head>
-  <body alt="Logo Formula 1"> 
-    <header class="navbar"> 
-      <h1 logo><img src="../img/F1_logo_mini.webp" alt="Logo Formula 1"></h1>
-      <nav class="topnav">
+  <body alt="Logo Formula 1">
+    <header class="navbarx">
+      <h1>
+        <a href="./index.html"
+          ><img src="../img/F1_logo_mini.webp" alt="Logo Formula 1"
+        /></a>
+      </h1>
+      <nav class="topnav">  
         <a href="index.html">Inicio</a>
         <a href="escuderias.html">Escuderias</a>
         <a href="pilotos.html">Pilotos</a>
       </nav>
     </header>
-    <main class="content">
-    <h1 class="section-title">Monoplazas 2026</h1>
-    
-    <div class="carousel-container">
-        <div class="carousel-item">
-            <img src="../img/monoplaza_mercedes.avif" alt="Mercedes W17">
-            <div class="carousel-caption">
-                <h3>Mercedes-AMG Petronas W17</h3>
-                
-            </div>
-        </div>
+    <body class="content">
+      <h1 class="section-title">Monoplazas de las escuderias</h1>
 
-        <div class="carousel-item">
-            <img src="../img/ferrari-monoplaza.png" alt="Ferrari SF-26">
-            <div class="carousel-caption">
-                <h3>Scuderia Ferrari SF-26</h3>
-                
-            </div>
-        </div>
 
-        <div class="carousel-item">
-            <img src="../img/mclaren.png" alt="McLaren MCL39">
-            <div class="carousel-caption">
-                <h3>McLaren Formula 1 MCL39</h3>
-                
-            </div>
-            
-        </div>
-        
-         <div class="carousel-item">
-            <img src="../img/monoplaza-alpine.webp" alt="Alpine A526">
-            <div class="carousel-caption">
-                <h3>Alpine F1 Team A526</h3>
-                
-            </div>
-            
-        </div>
+      <div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../img/monoplaza_mercedes.avif" class="d-block w-100" alt="Mercedes-AMG Petronas W17">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Mercedes Benz</h5>
+        <p>Mercedes-AMG Petronas W17</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../img/red-bull.webp" class="d-block w-100" alt="Red Bull Racing RB19">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Red Bull</h5>
+        <p>Red Bull Racing RB19</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../img/cadillac.png" class="d-block w-100" alt="Cadillac F1 Team C7">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Cadillac</h5>
+        <p>Cadillac F1 Team C7</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../img/alpine.png" class="d-block w-100" alt="Alpine F1 Team A526">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Alpine</h5>
+        <p>Alpine F1 Team A526</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../img/mclaren.png" class="d-block w-100" alt="McLaren F1 Team MCL40">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>McLaren</h5>
+        <p>McLaren F1 Team MCL40</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../img/ferrari-monoplaza.png" class="d-block w-100" alt="Ferrari F1 Team SF70H">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Ferrari</h5>
+        <p>Ferrari F1 Team SF70H</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<p class="instruction">← Desliza para ver más escuderías →</p>
 
-         <div class="carousel-item">
-            <img src="../img/aston-martin.png" alt="Aston Martin AMR26">
-            <div class="carousel-caption">
-                <h3>Aston Martin F1 Team AMR26</h3>
-                
-            </div>
-            
-            
-        </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    <footer class="footer">
+      <p>Nuestros auspiciantes</p>
+      <div class="sponsors-container">
+        <a
+          href="https://www.mcdonalds.com"
+          target="_blank"
+          class="sponsor-link"
+        >
+          <img
+            src="../img/mcdonalds-logo-png_seeklogo-514642.webp"
+            alt="Logo MC DONALDS"
+            class="sponsor-logo"
+          />
+        </a>
 
-         <div class="carousel-item">
-            <img src="../img/monoplaza-cadillac.webp" alt="Cadillac C7">
-            <div class="carousel-caption">
-                <h3>Cadillac F1 Team C7</h3>
-                
-            </div>
-            
-        </div>
+        <a
+          href="https://www.liqui-moly.com"
+          target="_blank"
+          class="sponsor-link"
+        >
+          <img
+            src="../img/liqui-moly-logo.webp"
+            alt="Logo LIQUI MOLY"
+            class="sponsor-logo"
+          />
+        </a>
 
-         <div class="carousel-item carrousel">
-            <img src="../img/red-bull.webp" alt="Red Bull RB18">
-            <div class="carousel-caption">
-                <h3>Red Bull F1 Team RB18</h3>
-                
-            </div>
-            
-        </div>
-        
-        </div>
-    
-    <p class="instruction">← Desliza para ver más escuderías →</p>
-</main>
+        <a href="https://www.puma.com" target="_blank" class="sponsor-link">
+          <img
+            src="../img/puma-logo-png.webp"
+            alt="Logo PUMA"
+            class="sponsor-logo"
+          />
+        </a>
+
+        <a
+          href="https://la.louisvuitton.com/"
+          target="_blank"
+          class="sponsor-link"
+        >
+          <img
+            src="../img/Louis-Vuitton-Logo-PNG.webp"
+            alt="Logo LOUIS VUITTON"
+            class="sponsor-logo"
+          />
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

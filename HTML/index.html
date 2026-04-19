@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="../CSS/style.css" />
   </head>
   <body alt="Logo Formula 1"> 
-    <header class="navbar"> 
-      <h1 logo><img src="../img/F1_logo_mini.webp" alt="Logo Formula 1"></h1>
+    <header class="navbarx"> 
+      <h1><a href="./index.html"><img src="../img/F1_logo_mini.webp" alt="Logo Formula 1"></a></h1>
       <nav class="topnav">
         <a href="index.html">Inicio</a>
         <a href="escuderias.html">Escuderias</a>
@@ -23,36 +23,49 @@
         <th>Pos</th>
         <th>Piloto</th>
         <th>Escudería</th>
+        <th>Posicion en ultima carrera</th>
         <th>Puntos</th>
       </tr>
     </thead>
     <tbody>
-      <tr class="mercedes-tabla">
+      <tr >
         <td class="pos">1</td>
-        <td><strong>Kimi Antonelli</strong></td>
+        <td class="mercedes-tabla">Kimi Antonelli</td>
         <td>Mercedes</td>
+        <td>1°</td>
+        <td class="pts">72</td>
+      </tr>
+      <tr >
+        <td class="pos">2</td>
+        <td class="mercedes-tabla">George Russell</td>
+        <td>Mercedes</td>
+        <td>2°</td>
+        <td class="pts">63</td>
+      </tr>
+      <tr >
+        <td class="pos">3</td>
+        <td class="ferrari-tabla">Charles Leclerc</td>
+        <td>Ferrari</td>
+        <td>3°</td>
+        <td class="pts">49</td>
+      </tr>
+      <tr >
+        <td class="pos">4</td>
+        <td class="mclaren-tabla">Lando Norris</td>
+        <td>McLaren</td>
+        <td>5°</td>
+        <td class="pts">41</td>
+      </tr>
+      <tr >
+        <td>4</td>
+        <td class="mclaren-tabla">Oscar Piastri</td>
+        <td>McLaren</td>
+        <td>5°</td>
         <td class="pts">25</td>
       </tr>
-      <tr class="mercedes-tabla">
-        <td class="pos">2</td>
-        <td>George Russell</td>
-        <td>Mercedes</td>
-        <td class="pts">18</td>
-      </tr>
-      <tr class="ferrari-tabla">
-        <td class="pos">3</td>
-        <td>Charles Leclerc</td>
-        <td>Ferrari</td>
-        <td class="pts">15</td>
-      </tr>
-      <tr class="mclaren-tabla">
-        <td class="pos">4</td>
-        <td>Lando Norris</td>
-        <td>McLaren</td>
-        <td class="pts">12</td>
-      </tr>
+      
     <tr class="view-more-row">
-        <td colspan="4">
+        <td colspan="5">
           <a href="pilotos.html" class="view-more-link">Ver todos los pilotos →</a>
         </td>
       </tr>
@@ -82,19 +95,24 @@
 </section>
 
     <div class="content">
-      <p>¡Registrate para obtener todas las noticias actualizadas!</p>
+      <p>¡Registrate para obtener todas las noticias de F1 actualizadas!</p>
 
       <form>
-        <input type="text" placeholder="Nombre" required name="Nombre" minlength="3">
-        <input type="email" placeholder="Email" required name="Email">
+        <label for="newsletter">Nombre</label>
+        <input type="text" placeholder="Franco Araujo" required name="Nombre" minlength="3">
+        <label for="Email">Correo Electrónico</label>
+        <input type="email" placeholder="F1@gmail.com" required name="Email">
+        <label for="newsletter">Fecha de nacimiento</label>
         <input type="date" name="Fecha">
-        <input type="text" placeholder="Teléfono" name="Teléfono">
+        <label for="phone">Número de teléfono</label>
+        <input type="text" placeholder="+54 11 1234-5678" name="Teléfono">
         <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar Formulario">
       </form>
     </div>
-
+</body>
     <footer class="footer"> 
-  <p>Auspiciado por</p>
+  <p>Nuestros auspiciantes</p>
   <div class="sponsors-container"> <a href="https://www.mcdonalds.com" target="_blank" class="sponsor-link">
       <img src="../img/mcdonalds-logo-png_seeklogo-514642.webp" alt="Logo MC DONALDS" class="sponsor-logo">
     </a>
@@ -114,6 +132,5 @@
     
   </div>
 </footer>
-    </footer>
-  </body>
+  
 </html>

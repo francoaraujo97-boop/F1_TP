@@ -1,72 +1,22 @@
-.navbar {
+.navbarx {
     display: flex;
+    height: 60px;  
     justify-content: space-between; /* Empuja el logo a un extremo y la nav al otro */
     align-items: center; /* Los centra verticalmente */
     padding: 10px 20px;
-    background-color: #15151e; 
+    background-color: #333333; 
     color: white;
-}
-
-.topnav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 15px;
-}
-
-
-table {
-    width: 100%;
-    border-collapse: collapse; /* Quita el espacio doble entre bordes */
-    margin: 20px 0;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: left;
-}
-
-th {
-    background-color: #e10600; 
-    color: white;
-}
-/* 1. Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f4f4f4;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    /* Reducimos la altura */
-    padding: 5px 5%; 
-    height: 60px;             /* Forzamos una altura fija más pequeña */
-    
-    background-color: #272727;
-    color: white;
-
-    /*para que el nav se quede arriba al scrollear */
-    position: sticky;         
+    position: sticky;  /*para que el nav se quede arriba al scrollear */       
     top: 0;                   /* Se queda pegado justo en el borde superior */
     z-index: 1000;            /* Asegura que pase por ENCIMA de las fotos y tablas */
-    
-    /* Opcional: una pequeña sombra para que se note que flota sobre el fondo */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.5); 
+    box-sizing: border-box;
+    margin: auto;
 }
 
 /* Ajustamos el tamaño del logo para que quepa en el nav más chico */
-.navbar img {
-    height: 30px;             
-    width: auto;
-}
-
-/* Estilo para el Logo */
-.navbar img {
+.navbarx img {
     height: 100px;             
+    width: auto;
     display: block;
 }
 
@@ -85,9 +35,108 @@ body {
     color: #e10600;            /* Rojo al pasar el mouse */
 }
 
+
+/* Contenedor y Título */
+.table-title {
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: sans-serif;
+    margin: 30px 0;
+}
+
+/* Estilo Base de la Tabla */
+.f1-table {
+    width: 90%;
+    margin: auto;
+}
+
+.f1-table th {
+    background-color: #15151e;
+    color: white;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    border: 1px solid #ffffff
+}
+
+.f1-table td {
+    background-color: rgb(43, 43, 43);
+    padding: 15px;
+    text-align: center;
+    border-radius: 3px;
+        border: 1px solid #ddd;
+}
+/* Alineación de datos */
+.pos { font-weight: bold; text-align: center; width: 50px; }
+.pts { font-weight: bold; text-align: center; }
+
+
+.mercedes-tabla { border-left: 5px solid #27f4d2; } 
+.ferrari-tabla  { border-left: 5px solid #e10600; } 
+.mclaren-tabla  { border-left: 5px solid #ff8700; } 
+.redbull-tabla  { border-left: 5px solid #3671C6; } 
+
+
+.f1-table {
+    max-width: 800px;
+    border-collapse: separate; 
+    border-spacing: 0 10px; /* Esto da el efecto de filas separadas */
+}
+
+/* 2. En lugar de darle el borde al <tr>, se lo damos a los <td> */
+/* Pero solo a los de esa clase específica */
+
+.mercedes-tabla td { border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+.mercedes-tabla td:first-child { 
+    border-left: 5px solid #27f4d2; /* Color Mercedes */
+}
+
+.ferrari-tabla td { border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+.ferrari-tabla td:first-child { 
+    border-left: 5px solid #e10600; /* Color Ferrari */
+}
+
+.mclaren-tabla td { border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+.mclaren-tabla td:first-child { 
+    border-left: 5px solid #ff8700; /* Color McLaren */
+}
+
+/* 3. Para que el resto de las celdas tengan el borde derecho */
+.f1-table td:last-child {
+    border-right: 1px solid #ddd;
+}
+  /* Estilo para la fila de "Ver más" */
+.view-more-row td {
+    text-align: center;
+    padding: 20px !important; /* Le damos más aire */
+    background-color: rgba(255, 255, 255, 0.05) !important; /* Un fondo sutil */
+}
+
+.view-more-link {
+    color: #ffffff; /* Rojo F1 */
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.view-more-link:hover {
+    color: rgb(255, 0, 0);
+    transform: translateX(15px); /* Pequeño movimiento hacia la derecha */
+}
+
+/* Opcional: Quitar el borde de color de la escudería para esta fila */
+.view-more-row {
+    border-left: none !important;
+}
+
 /* Contenedor del formulario */
 form {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.15);
     padding: 30px;
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Una sombra suave para darle relieve */
@@ -97,6 +146,8 @@ form {
     flex-direction: column; /* Pone un input debajo del otro */
     gap: 15px; /* Crea espacio uniforme entre cada input */
 }
+form label {
+    color: #ffffff;}
 
 /* Estilo para los campos de texto, email y fecha */
 input[type="text"],
@@ -117,23 +168,37 @@ input:focus {
 
 /* El botón de enviar */
 input[type="submit"] {
-    background-color: #e10600;
-    color: white;
+    background-color: #63ff63;
+    color: rgb(0, 0, 0);
     padding: 12px;
     border: none;
     border-radius: 4px;
     font-weight: bold;
     cursor: pointer; /* Cambia el cursor a una mano */
-    text-transform: uppercase;
     transition: background-color 0.3s;
+    font-size: 16px;
+}
+input[type="reset"] {
+    background-color: #fc3030;
+    color: rgb(0, 0, 0);
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer; /* Cambia el cursor a una mano */
+    transition: background-color 0.3s;
+    font-size: 16px;
 }
 
 /* Efecto al pasar el mouse por el botón */
 input[type="submit"]:hover {
-    background-color: #b00500; /* Un rojo más oscuro al presionar */
+    background-color: #35ff23; /* Un rojo más oscuro al presionar */
+}
+input[type="reset"]:hover {
+    background-color: #ff0000; /* Un rojo más oscuro al presionar */
 }
 body {
-    /* Reemplaza la URL por una imagen HD de F1 */
+    
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
                       url(../img/f1_wallpaper.webp);
     
@@ -141,7 +206,6 @@ body {
     background-position: center;  /* Centra la foto */
     background-attachment: fixed; /* La imagen se queda quieta mientras haces scroll */
     background-repeat: no-repeat;
-    
     margin: 0;
     font-family: Arial, sans-serif;
     color: white; /* Texto blanco para que resalte */
@@ -179,7 +243,6 @@ body {
     /* Filtro a Blanco y Negro y opacidad baja */
     filter: grayscale(100%); /* Convierte a B&N completo */
     opacity: 0.6;            /* Lo hace un poco transparente */
-    
     transition: all 0.4s ease; /* Suaviza el cambio al pasar el mouse */
 }
 
@@ -187,80 +250,9 @@ body {
 .sponsor-link:hover .sponsor-logo {
     filter: grayscale(0%);   /* Vuelve a su color original */
     opacity: 1;              /* Opacidad total */
-    transform: scale(1.4);   /* Un ligero aumento de tamaño */
+    transform: scale(1.8);   /* aumento de tamaño */
 }
 
-/* Contenedor y Título */
-.table-title {
-    text-align: center;
-    text-transform: uppercase;
-    color: #ffffff;
-    font-family: 'F1-Bold', sans-serif;
-    margin: 30px 0;
-}
-
-/* Estilo Base de la Tabla */
-.f1-table {
-    width: 90%;
-    margin: 0 auto;
-    border-collapse: separate; /* Permite redondear bordes de filas */
-    border-spacing: 0 8px;    /* Separa un poco las filas entre sí */
-}
-
-.f1-table th {
-    background-color: #15151e;
-    color: white;
-    padding: 15px;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-}
-
-.f1-table td {
-    background-color: rgb(43, 43, 43);
-    padding: 15px;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-}
-
-/* Alineación de datos */
-.pos { font-weight: bold; text-align: center; width: 50px; }
-.pts { font-weight: bold; text-align: right; }
-
-
-.mercedes-tabla { border-left: 5px solid #27f4d2; } /* Verde Turquesa Mercedes */
-.ferrari-tabla  { border-left: 5px solid #e10600; } /* Rojo Ferrari */
-.mclaren-tabla  { border-left: 5px solid #ff8700; } /* Naranja McLaren */
-.redbull-tabla  { border-left: 5px solid #3671C6; } /* Azul Red Bull */
-
-/* 1. Asegúrate de que la tabla NO colapse sus bordes */
-.f1-table {
-    width: 95%;
-    border-collapse: separate; 
-    border-spacing: 0 10px; /* Esto da el efecto de filas separadas */
-}
-
-/* 2. En lugar de darle el borde al <tr>, se lo damos a los <td> */
-/* Pero solo a los de esa clase específica */
-
-.mercedes-tabla td { border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
-.mercedes-tabla td:first-child { 
-    border-left: 5px solid #27f4d2; /* Color Mercedes */
-}
-
-.ferrari-tabla td { border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
-.ferrari-tabla td:first-child { 
-    border-left: 5px solid #e10600; /* Color Ferrari */
-}
-
-.mclaren-tabla td { border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
-.mclaren-tabla td:first-child { 
-    border-left: 5px solid #ff8700; /* Color McLaren */
-}
-
-/* 3. Para que el resto de las celdas tengan el borde derecho */
-.f1-table td:last-child {
-    border-right: 1px solid #ddd;
-}
 .news-section {
     max-width: 800px;
     margin: 50px auto; /* Mucho margen arriba y abajo para forzar el scroll */
@@ -276,7 +268,7 @@ body {
 }
 
 .news-card {
-    background: rgba(255, 255, 255, 0.05); 
+    background: rgba(255, 255, 255, 0.15); 
     backdrop-filter: blur(5px); 
     padding: 20px;
     margin-bottom: 20px;
@@ -321,33 +313,7 @@ body {
     text-align: center;
 }
 
-  /* Estilo para la fila de "Ver más" */
-.view-more-row td {
-    text-align: center;
-    padding: 20px !important; /* Le damos más aire */
-    background-color: rgba(255, 255, 255, 0.05) !important; /* Un fondo sutil */
-}
 
-.view-more-link {
-    color: #ffffff; /* Rojo F1 */
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.view-more-link:hover {
-    color: rgb(0, 131, 238);
-    transform: translateX(5px); /* Pequeño movimiento hacia la derecha */
-}
-
-/* Opcional: Quitar el borde de color de la escudería para esta fila */
-.view-more-row {
-    border-left: none !important;
-}
 
 /* Contenedor principal de las tarjetas */
 .pilots-container {
@@ -361,11 +327,11 @@ body {
 /* Estilo de la Tarjeta Individual */
 .pilot-card {
     background-color: #15151e; /* Fondo oscuro */
-    width: 280px;              /* Ancho fijo para asegurar 4 por fila en pantallas grandes */
+    width: 280px;              /* Ancho fijo  */
     border-radius: 15px;
     overflow: hidden;          /* Corta la imagen si sobresale de los bordes redondeados */
     position: relative;
-    border-bottom: 5px solid #666; /* Color genérico, luego lo personalizamos */
+    border-bottom: 5px solid #666; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -421,7 +387,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* Colores por Escudería (Igual que en la tabla) */
+/* Colores por Escudería */
 .mercedes { border-bottom-color: #27f4d2; }
 .ferrari { border-bottom-color: #e10600; }
 .mclaren { border-bottom-color: #ff8700; }
@@ -430,7 +396,8 @@ body {
 .cadillac { border-bottom-color: #585858; }
 .astonmartin { border-bottom-color: #1d4728; }
 
-/* Contenedor que permite el scroll horizontal */ /*Aca empieza el css de escuderias*/
+/* Contenedor que permite el scroll horizontal */ 
+/*Aca empieza el css de escuderias*/
 .carousel-container {
     display: flex;
     overflow-x: auto;          /* Habilita el scroll horizontal */
@@ -455,8 +422,8 @@ body {
 }
 
 .carousel-item img {
-    width: 100%;
-    height: 700px;             /* Altura fija para los monoplazas */
+    width: 100%vw;
+    height: 70vh;             /* Altura fija para los monoplazas */
     object-fit: cover;         /* Para que la foto no se deforme */
     display: block;
 }
@@ -494,9 +461,13 @@ body {
 }
 
 .section-title {
-  text-align: center;
+    text-align: center;
     color: #ffffff;
     font-size: 2rem;
     margin-top: 10px;
     text-transform: uppercase;
 }
+.carousel-caption {
+    background-color: rgba(0.1, 0.1, 0.1, 0.7);
+}
+
