@@ -202,7 +202,7 @@ input[type="reset"]:hover {
 body {
     
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                      url(./img/f1_wallpaper.webp);
+                      url(../img/thumb-1920-317664.jpg);
     
     background-size: cover;       /* La imagen cubre toda la pantalla */
     background-position: center;  /* Centra la foto */
